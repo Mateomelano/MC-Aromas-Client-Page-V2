@@ -1,0 +1,260 @@
+.carrito-drawer {
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: 600px;
+  height: 100%;
+  background: #f7f7f7;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  z-index: 9999;
+}
+
+.carrito-drawer.abierto {
+  right: 0;
+  transition: right 0.5s ease;
+
+  
+}
+
+.carrito-header {
+  padding: 20px; // ya está bien
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; // quitá el auto para que no se centre
+  }
+}
+
+#cerrarCarrito {
+  background: none;
+  border: none;
+  font-size: 3.5rem;
+  cursor: pointer;
+  color: #b91616;
+  padding: 0; // opcional, por si le quedó padding por defecto
+}
+
+
+.carrito-contenido {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.carrito-producto {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.carrito-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 18px;
+  flex-shrink: 0;
+}
+
+.carrito-producto-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carrito-producto-info .nombre {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.carrito-precio {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.cantidad-control button {
+  background-color: #b91616;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cantidad-control span {
+  margin: 0 0.7rem;
+  min-width: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.eliminar {
+  background: none;
+  border: none;
+  color: #b91616;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.carrito-footer {
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.carrito-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.btn-iniciar-compra {
+  width: 100%;
+  background: #b91616;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ver-mas {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #b91616;
+  text-decoration: none;
+}
+
+.eliminar{
+  font-size: 1.5rem !important;
+}
+.precio{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
+//icono
+.icono-carrito-contenedor {
+  position: relative;
+  display: inline-block;
+}
+
+.contador-carrito {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #b91616;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: none; // Oculto por defecto si no hay productos
+}
+
+.carrito-total {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+
+  .linea-total,
+  .linea-total-mayorista {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    font-size: 1.4rem;
+
+    span {
+      font-weight: 600;
+      color: #333;
+    }
+
+    strong {
+      font-weight: bold;
+      color: #333;
+    }
+  }
+
+  .linea-total-mayorista {
+    color: #888;
+
+    strong {
+      color: #888;
+    }
+  }
+}
+
+
+
+.precio-mayorista {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.3rem;
+}
+.etiqueta-mayorista {
+  font-weight: bold;
+  color: #b00;
+  margin-right: 0.3rem;
+  font-size: 1.4rem;
+}
+
+
+.carrito-info-mayorista {
+  background-color: #fff5f5;
+  border-left: 5px solid #b91616;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 0.8rem !important;
+  color: #333;
+
+  p {
+    margin: 0 0 8px;
+    line-height: 1.4;
+    font-size: 1.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    color: #b91616;
+  }
+}

@@ -1,0 +1,227 @@
+/* Estilos base */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Contenedor de productos */
+.productos {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grid de tarjetas */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card individual */
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagen del producto */
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nombre del producto */
+.card-content h3.producto-nombre {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    color: #000;
+}
+
+/* Descripción */
+.card-content p.producto-descripcion {
+    font-size: 1.2rem;
+    color: #888;
+    margin: 0 0 12px 0;
+}
+
+/* Precio principal */
+.card-content p.producto-precio {
+    font-size: 1.9rem;
+    color: #000;
+    font-weight: bold;
+    font-weight: 900;
+    margin: 0 0 6px 0;
+}
+
+/* Precio mayorista */
+.card-content p.precio-mayorista {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 14px;
+    font-weight: 500;
+    margin: 0 0 6px 0;
+}
+
+/* Botón */
+.card button {
+    background-color: #00a046;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #008c3a;
+}
+
+
+
+//FILTROS
+
+
+.filtro-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding-left: 10px;
+    margin-top: 12rem;
+}
+
+.filtro-container label {
+    font-weight: 500;
+    color: #b91616; /* Color similar al de la imagen */
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 500px;
+}
+
+.filtro-container i {
+    font-size: 1.5rem;
+}
+
+#filtro-select {
+    padding: 10px 14px;
+    border: 2px solid #b91616;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1.5rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+#filtro-select:hover {
+    border-color: #b91616;
+}
+
+#filtro-select:focus {
+    border-color: #b91616;
+}
+
+.special{
+    border: 1px solid #000000;
+}
+
+#btn-reset-filtros {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #b91616;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+#btn-reset-filtros:hover {
+    border-color: #b91616;
+    color: #b91616; /* Color similar al de la imagen */
+}
+
+
+// SEARCHBAR
+.special2{
+    border: 1.5px solid #b91616;
+}
+
+//Boton subir arriba
+
+#btnSubirArriba {
+    position: fixed;
+    bottom: 20px;
+    right: 100px;
+    z-index: 1000;
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+#btnSubirArriba img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+#btnSubirArriba:hover img {
+    transform: scale(1.1);
+}
+
+
+//Paginador
+#paginador button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  #paginador button.activo {
+    background-color: #b91616; /* Azul Bootstrap */
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    transform: scale(1.1); /* Que se agrande un poco */
+  }
+  
+
+.card-image {
+    cursor: pointer;
+}

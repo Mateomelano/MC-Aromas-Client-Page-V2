@@ -1,0 +1,113 @@
+/* Navbar z-index bajo */
+.navbar {
+    z-index: 10;
+  }
+  
+  /* Sidebar base */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background-color: #bd2b2b;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 20px;
+    list-style: none; /* ✅ Elimina puntitos */
+  }
+  
+  .sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .submenu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+    padding-left: 10px;
+    margin-top: 5px;
+  }
+  
+  .submenu.show {
+    max-height: 500px; /* suficiente para mostrar todos los items */
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .submenu li {
+    margin-bottom: 15px;
+    list-style: none;
+  }
+  
+  .submenu li a {
+    font-weight: normal;
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .submenu li a:hover {
+    color: #dfdddd;
+  }
+  
+  .has-submenu .submenu-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 2rem;
+    
+  }
+  .all-products{
+    margin-bottom: 3rem;
+  }
+  
+  .has-submenu .submenu-toggle:hover {
+    color: #dfdddd;
+  }
+  
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .arrow-icon.rotate {
+    transform: rotate(90deg);
+  }
+  
+  #close-sidebar {
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  
+  #close-sidebar:hover {
+    color: #dfdddd;
+  }
+  

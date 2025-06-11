@@ -1,0 +1,202 @@
+.marcas {
+    padding: 3rem;
+
+  
+    .grid-mosaico {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 3rem;
+      grid-template-areas:
+        "saphirus aromanza"
+        "saphirus bloqueInferior";
+  
+      .saphirus {
+        grid-area: saphirus;
+        background-image: url('https://res.cloudinary.com/dzfzqzdcu/image/upload/v1744314374/oqwip5vvtvzu9ds2cwjy.jpg');
+      }
+  
+      .aromanza {
+        grid-area: aromanza;
+        background-image: url('https://res.cloudinary.com/dzfzqzdcu/image/upload/v1744314458/jljgnyg2ajsmg0jxjave.jpg');
+      }
+  
+      .bloqueInferior {
+        grid-area: bloqueInferior;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+  
+        .sagrada {
+          background-image: url('https://res.cloudinary.com/dzfzqzdcu/image/upload/v1744314545/vf6iygl2nqcco9og1onp.jpg');
+        }
+  
+        .sandra {
+          background-image: url('https://res.cloudinary.com/dzfzqzdcu/image/upload/v1744314502/czj3yefemezt41tqw5em.jpg');
+        }
+      }
+  
+      .card {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        min-height: 300px;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s;
+  
+        &:hover {
+          transform: scale(1.02);
+          cursor: pointer;
+        }
+  
+        .overlay {
+          background-color: rgba(0, 0, 0, 0.3);
+          color: white;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          transition: background-color 0.3s ease;
+  
+          h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+          }
+  
+          a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid white;
+            padding-bottom: 0.2rem;
+            transition: color 0.2s ease;
+            font-family: 'Montserrat', sans-serif;
+  
+            &:hover {
+              color: #ccc;
+            }
+          }
+        }
+  
+        &:hover .overlay {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+  
+
+.marcas-secundarias {
+  padding: 3rem;
+
+  .grid-mosaico-secundario {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr; // invertido
+    grid-template-rows: 1fr 1fr;
+    gap: 3rem;
+    grid-template-areas:
+      "bloqueSuperior fuente"
+      "bloqueInferior fuente";
+    height: 700px; // Ajuste visual proporcional
+
+    .fuente {
+      grid-area: fuente;
+      background-image: url('https://purple-sheep-451734.hostingersite.com/uploads/683067ec8eb61_fbea4031-b7d8-495d-919c-7b000870163a.jpg');
+    }
+
+    .velas {
+      background-image: url('https://purple-sheep-451734.hostingersite.com/uploads/682a6d8f7faf1_velas.webp');
+      height: 100%; // ✅ que ocupe todo el bloqueSuperior
+    }
+
+    .lamparas {
+      background-image: url('https://purple-sheep-451734.hostingersite.com/uploads/682a6df1a8310_lamparasal.png');
+    }
+
+    .iluminarte {
+      background-image: url('https://purple-sheep-451734.hostingersite.com/uploads/683063949218a_Cascada20de20Humo20Zen.webp');
+    }
+
+    .bloqueSuperior,
+    .bloqueInferior {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .bloqueSuperior {
+      grid-area: bloqueSuperior;
+      display: flex;
+      flex-direction: column;
+      height: 100%; // ✅ necesario para que .velas herede altura
+    }
+
+    .bloqueInferior {
+      grid-area: bloqueInferior;
+
+      .card {
+        &.lamparas,
+        &.iluminarte { }
+      }
+    }
+
+    .card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      min-height: 300px;
+      border-radius: 5px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+      }
+
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: background-color 0.3s ease;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          border-bottom: 2px solid white;
+          font-family: 'Montserrat', sans-serif;
+
+          &:hover {
+            color: #ccc;
+          }
+        }
+      }
+
+      &:hover .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+
+  
