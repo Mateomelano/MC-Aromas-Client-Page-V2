@@ -69,33 +69,70 @@ if ($resultado && $fila = $resultado->fetch_assoc()) {
 </style>
 <?php endif; ?>
 
+
+<!-- Modales -->
+<div id="auth-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <!-- LOGIN -->
+    <form id="login-form" action="login.php" method="post">
+      <h2>Iniciar Sesión</h2>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="password" name="password" placeholder="Contraseña" required>
+      <button type="submit">Entrar</button>
+      <p>¿No tienes cuenta? <a href="#" id="show-register">Regístrate</a></p>
+    </form>
+
+    <!-- REGISTER -->
+    <form id="register-form" action="register.php" method="post" style="display:none;">
+      <h2>Crear Cuenta</h2>
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="password" name="password" placeholder="Contraseña" required>
+      <button type="submit">Registrarse</button>
+      <p>¿Ya tienes cuenta? <a href="#" id="show-login">Inicia sesión</a></p>
+    </form>
+
+  </div>
+</div>
+
   <!--  NAVBAR  -->
 
-  <nav class="navbar">
-    <div class="nav-left">
-      <i id="sidebar-icon" class="fas fa-bars"></i>
-      <div class="search-container">
-        <input type="text" class="busqueda" placeholder="Buscar...">
-        <button type="submit" class="btn-buscar"><i class="fas fa-search"></i></button>
-      </div>
+<nav class="navbar">
+  <div class="nav-left">
+    <i id="sidebar-icon" class="fas fa-bars"></i>
+    <div class="search-container">
+      <input type="text" class="busqueda" placeholder="Buscar...">
+      <button type="submit" class="btn-buscar">
+        <i class="fas fa-search"></i>
+      </button>
     </div>
+  </div>
 
-    <div class="nav-center">
-      <a href="index.php">
-        <img class="logo-central"
-          src="https://res.cloudinary.com/dzfzqzdcu/image/upload/v1744059260/ea4zbrhdcpl4eu9mdgwz.png" alt="Logo">
-      </a>
-    </div>
+  <div class="nav-center">
+    <a href="index.php">
+      <img class="logo-central"
+           src="https://res.cloudinary.com/dzfzqzdcu/image/upload/v1744059260/ea4zbrhdcpl4eu9mdgwz.png"
+           alt="Logo">
+    </a>
+  </div>
 
-    <div class="nav-right">
-      <div class="icono-carrito-contenedor">
-        <img id="iconoCarrito"
-          src="https://res.cloudinary.com/dzfzqzdcu/image/upload/v1744059294/y0illgpwo5zv2yhyhvxs.png" class="carrito"
-          alt="Carrito">
-        <span id="contadorCarrito" class="contador-carrito">0</span>
-      </div>
+  <div class="nav-right">
+    <!-- Ícono de usuario para abrir modal -->
+    <a href="#" id="user-icon" class="user-icon">
+      <i class="fas fa-user"></i>
+    </a>
+
+    <div class="icono-carrito-contenedor">
+      <img id="iconoCarrito"
+           src="https://res.cloudinary.com/dzfzqzdcu/image/upload/v1744059294/y0illgpwo5zv2yhyhvxs.png"
+           class="carrito"
+           alt="Carrito">
+      <span id="contadorCarrito" class="contador-carrito">0</span>
     </div>
-  </nav>
+  </div>
+</nav>
 
 
   <!-- SIDEBAR -->
